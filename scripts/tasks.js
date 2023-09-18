@@ -11,7 +11,7 @@ async function main() {
   const owner = accounts[0];
   console.log('owner', owner.address);
 
-  const contractAddr = '';
+  const contractAddr = '0x9afe95fd31bc74c30ca1d326d92a80159e22eb14';
   const fans = await hre.ethers.getContractAt('Fans3Shares', contractAddr);
 
   // get price
