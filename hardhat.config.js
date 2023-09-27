@@ -1,27 +1,30 @@
-require('dotenv/config');
-require('@openzeppelin/hardhat-upgrades');
+require('dotenv/config')
+require('@openzeppelin/hardhat-upgrades')
 // require('@nomiclabs/hardhat-web3');
-// require('@nomiclabs/hardhat-etherscan');
+require('@nomicfoundation/hardhat-verify')
 
 task('accounts', 'Prints the list of accounts', async (taskArgs, hre) => {
-  const accounts = await hre.ethers.getSigners();
+  const accounts = await hre.ethers.getSigners()
 
   for (const account of accounts) {
-    console.log(account.address);
+    console.log(account.address)
   }
-});
+})
 
 function accounts() {
-  privatekey = process.env.PrivateKey;
+  privatekey = process.env.PrivateKey
   if (!privatekey)
     return {
       mnemonic: 'test test test test test test test test test test test junk',
-    };
-  return [privatekey];
+    }
+  return [privatekey]
 }
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
+  etherscan: {
+    apiKey: process.env.ETHERSCAN_API_KEY,
+  },
   networks: {
     hardhat: {},
     localhost: {
@@ -52,4 +55,4 @@ module.exports = {
       },
     ],
   },
-};
+}
