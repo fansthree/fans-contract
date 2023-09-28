@@ -585,6 +585,458 @@
           }
         }
       }
+    },
+    "9c519d9c55033c6b159164096ee4d4200026f86fd7a14894c954f187c818b8de": {
+      "address": "0x1A1b21c158Cc39197eC31ef7682e1DA8DA851bF9",
+      "txHash": "0x376ba3b31382a3b7ad15c4e4b5bb2a81b9e0e2946fc11d6cd356dc90106f881e",
+      "layout": {
+        "solcVersion": "0.8.19",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:63",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:68"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "protocolFeeDestination",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_address",
+            "contract": "Fans3Shares",
+            "src": "contracts/fans3Shares.sol:11"
+          },
+          {
+            "label": "protocolFeePercent",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_uint256",
+            "contract": "Fans3Shares",
+            "src": "contracts/fans3Shares.sol:12"
+          },
+          {
+            "label": "subjectFeePercent",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_uint256",
+            "contract": "Fans3Shares",
+            "src": "contracts/fans3Shares.sol:13"
+          },
+          {
+            "label": "subjectFans",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_mapping(t_address,t_struct(AddressSet)998_storage)",
+            "contract": "Fans3Shares",
+            "src": "contracts/fans3Shares.sol:14"
+          },
+          {
+            "label": "sharesBalance",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "Fans3Shares",
+            "src": "contracts/fans3Shares.sol:20"
+          },
+          {
+            "label": "sharesSupply",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "Fans3Shares",
+            "src": "contracts/fans3Shares.sol:23"
+          },
+          {
+            "label": "holdings",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_mapping(t_address,t_struct(AddressSet)998_storage)",
+            "contract": "Fans3Shares",
+            "src": "contracts/fans3Shares.sol:24"
+          },
+          {
+            "label": "sharePlatform",
+            "offset": 0,
+            "slot": "108",
+            "type": "t_mapping(t_address,t_mapping(t_string_memory_ptr,t_string_storage))",
+            "contract": "Fans3Shares",
+            "src": "contracts/fans3Shares.sol:25"
+          },
+          {
+            "label": "groupHolder",
+            "offset": 0,
+            "slot": "109",
+            "type": "t_mapping(t_string_memory_ptr,t_mapping(t_string_memory_ptr,t_address))",
+            "contract": "Fans3Shares",
+            "src": "contracts/fans3Shares.sol:26"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_bytes32)dyn_storage": {
+            "label": "bytes32[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_string_memory_ptr,t_string_storage))": {
+            "label": "mapping(address => mapping(string => string))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(AddressSet)998_storage)": {
+            "label": "mapping(address => struct EnumerableSetUpgradeable.AddressSet)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_uint256)": {
+            "label": "mapping(bytes32 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_string_memory_ptr,t_address)": {
+            "label": "mapping(string => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_string_memory_ptr,t_mapping(t_string_memory_ptr,t_address))": {
+            "label": "mapping(string => mapping(string => address))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_string_memory_ptr,t_string_storage)": {
+            "label": "mapping(string => string)",
+            "numberOfBytes": "32"
+          },
+          "t_string_memory_ptr": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(AddressSet)998_storage": {
+            "label": "struct EnumerableSetUpgradeable.AddressSet",
+            "members": [
+              {
+                "label": "_inner",
+                "type": "t_struct(Set)683_storage",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_struct(Set)683_storage": {
+            "label": "struct EnumerableSetUpgradeable.Set",
+            "members": [
+              {
+                "label": "_values",
+                "type": "t_array(t_bytes32)dyn_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_indexes",
+                "type": "t_mapping(t_bytes32,t_uint256)",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "bf906e52e284db32d57ee423dc71e4f7f244c1eefe0815fe86ded61cb7e33f24": {
+      "address": "0x4F004016223585967E2439D6995ad2fa0f82Dd5d",
+      "txHash": "0x2f2fe4453079deb687aed6fd6fdcaffbce9098dcc1c34257436ba6738520a8b7",
+      "layout": {
+        "solcVersion": "0.8.19",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:63",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:68"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "protocolFeeDestination",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_address",
+            "contract": "Fans3Shares",
+            "src": "contracts/fans3Shares.sol:11"
+          },
+          {
+            "label": "protocolFeePercent",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_uint256",
+            "contract": "Fans3Shares",
+            "src": "contracts/fans3Shares.sol:12"
+          },
+          {
+            "label": "subjectFeePercent",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_uint256",
+            "contract": "Fans3Shares",
+            "src": "contracts/fans3Shares.sol:13"
+          },
+          {
+            "label": "subjectFans",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_mapping(t_address,t_struct(AddressSet)998_storage)",
+            "contract": "Fans3Shares",
+            "src": "contracts/fans3Shares.sol:14"
+          },
+          {
+            "label": "sharesBalance",
+            "offset": 0,
+            "slot": "105",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "contract": "Fans3Shares",
+            "src": "contracts/fans3Shares.sol:20"
+          },
+          {
+            "label": "sharesSupply",
+            "offset": 0,
+            "slot": "106",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "Fans3Shares",
+            "src": "contracts/fans3Shares.sol:23"
+          },
+          {
+            "label": "holdings",
+            "offset": 0,
+            "slot": "107",
+            "type": "t_mapping(t_address,t_struct(AddressSet)998_storage)",
+            "contract": "Fans3Shares",
+            "src": "contracts/fans3Shares.sol:24"
+          },
+          {
+            "label": "sharePlatform",
+            "offset": 0,
+            "slot": "108",
+            "type": "t_mapping(t_address,t_mapping(t_string_memory_ptr,t_string_storage))",
+            "contract": "Fans3Shares",
+            "src": "contracts/fans3Shares.sol:25"
+          },
+          {
+            "label": "groupHolder",
+            "offset": 0,
+            "slot": "109",
+            "type": "t_mapping(t_string_memory_ptr,t_mapping(t_string_memory_ptr,t_address))",
+            "contract": "Fans3Shares",
+            "src": "contracts/fans3Shares.sol:26"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_bytes32)dyn_storage": {
+            "label": "bytes32[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_string_memory_ptr,t_string_storage))": {
+            "label": "mapping(address => mapping(string => string))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(AddressSet)998_storage)": {
+            "label": "mapping(address => struct EnumerableSetUpgradeable.AddressSet)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_uint256)": {
+            "label": "mapping(bytes32 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_string_memory_ptr,t_address)": {
+            "label": "mapping(string => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_string_memory_ptr,t_mapping(t_string_memory_ptr,t_address))": {
+            "label": "mapping(string => mapping(string => address))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_string_memory_ptr,t_string_storage)": {
+            "label": "mapping(string => string)",
+            "numberOfBytes": "32"
+          },
+          "t_string_memory_ptr": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(AddressSet)998_storage": {
+            "label": "struct EnumerableSetUpgradeable.AddressSet",
+            "members": [
+              {
+                "label": "_inner",
+                "type": "t_struct(Set)683_storage",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_struct(Set)683_storage": {
+            "label": "struct EnumerableSetUpgradeable.Set",
+            "members": [
+              {
+                "label": "_values",
+                "type": "t_array(t_bytes32)dyn_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_indexes",
+                "type": "t_mapping(t_bytes32,t_uint256)",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
     }
   }
 }

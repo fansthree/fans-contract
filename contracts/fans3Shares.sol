@@ -23,6 +23,7 @@ contract Fans3Shares is OwnableUpgradeable {
     mapping(address => uint256) public sharesSupply;
     mapping(address => EnumerableSetUpgradeable.AddressSet) private holdings;
     mapping(address => mapping(string => string)) public sharePlatform;
+    mapping(string => mapping(string => address)) public groupHolder;
 
     function initialize() public initializer {
         __Ownable_init();
@@ -79,6 +80,7 @@ contract Fans3Shares is OwnableUpgradeable {
 
     function bindShare(string calldata platform, string calldata id) public {
         sharePlatform[msg.sender][platform] = id;
+        groupHolder[platform][id] = msg.sender;
         emit Bind(msg.sender, platform, id);
     }
 
@@ -111,7 +113,9 @@ contract Fans3Shares is OwnableUpgradeable {
 
     function sellShares(address sharesSubject, uint256 amount) public payable {
         uint256 supply = sharesSupply[sharesSubject];
-        require(supply > amount, "Cannot sell the last share");
+        // disable this for testing
+        // require(supply > amount, "Cannot sell the last share");
+        require(supply >= amount, "Cannot sell the last share");
         uint256 price = getPrice(supply - amount, amount);
         uint256 protocolFee = (price * protocolFeePercent) / 1 ether;
         uint256 subjectFee = (price * subjectFeePercent) / 1 ether;
