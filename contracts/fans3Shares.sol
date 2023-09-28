@@ -14,6 +14,7 @@ contract Fans3Shares is OwnableUpgradeable {
     mapping(address => EnumerableSetUpgradeable.AddressSet) private subjectFans;
 
     event Trade(address trader, address subject, bool isBuy, uint256 shareAmount, uint256 ethAmount, uint256 protocolEthAmount, uint256 subjectEthAmount, uint256 supply);
+    event Bind(address shareHolder, string platform, string id);
 
     // SharesSubject => (Holder => Balance)
     mapping(address => mapping(address => uint256)) public sharesBalance;
@@ -21,6 +22,7 @@ contract Fans3Shares is OwnableUpgradeable {
     // SharesSubject => Supply
     mapping(address => uint256) public sharesSupply;
     mapping(address => EnumerableSetUpgradeable.AddressSet) private holdings;
+    mapping(address => mapping(string => string)) public sharePlatform;
 
     function initialize() public initializer {
         __Ownable_init();
@@ -73,6 +75,18 @@ contract Fans3Shares is OwnableUpgradeable {
 
     function getHoldings(address _owner) public view returns (address[] memory) {
         return holdings[_owner].values();
+    }
+
+    function bindShare(string calldata platform, string calldata id) public {
+        sharePlatform[msg.sender][platform] = id;
+        emit Bind(msg.sender, platform, id);
+    }
+
+    function createShare(uint256 amount, string calldata platform, string calldata id) public payable {
+        uint256 supply = sharesSupply[msg.sender];
+        require(supply == 0, "Already created");
+        buyShares(msg.sender, amount);
+        bindShare(platform, id);
     }
 
     function buyShares(address sharesSubject, uint256 amount) public payable {
